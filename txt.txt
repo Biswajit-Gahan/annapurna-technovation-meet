@@ -1,0 +1,24 @@
+npm install firebase
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCwTiPd9ilvhIonXMfFgoXq9I3eClz5Nlk",
+  authDomain: "meetingevent-90a9d.firebaseapp.com",
+  databaseURL: "https://meetingevent-90a9d-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "meetingevent-90a9d",
+  storageBucket: "meetingevent-90a9d.appspot.com",
+  messagingSenderId: "837447657224",
+  appId: "1:837447657224:web:d864201e06faa58244aebd",
+  measurementId: "G-537ZWGR535"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
