@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import MyLocationOutlinedIcon from '@mui/icons-material/MyLocationOutlined';
 import PlayCircleFilledWhiteOutlinedIcon from '@mui/icons-material/PlayCircleFilledWhiteOutlined';
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
+import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
 import { useDispatch, useSelector } from "react-redux";
 import { updateAdminLogin } from "../../redux/adminSlice";
@@ -28,6 +29,7 @@ const Navbar = () => {
             <li className="navbar-item"><NavLink to="/location"><MyLocationOutlinedIcon className="nav-icons" />Live Location</NavLink></li>
             <li className="navbar-item"><NavLink to="/play-quiz"><PlayCircleFilledWhiteOutlinedIcon className="nav-icons" />Play Quiz</NavLink></li>
             <li className="navbar-item"><NavLink to="/set-questions"><AddBoxOutlinedIcon className="nav-icons" />Add Questions</NavLink></li>
+            <li className="navbar-item"><NavLink to="/results"><DonutLargeIcon className="nav-icons" />Results</NavLink></li>
             <li className="navbar-item" onClick={handleLogout}><NavLink to="/login"><LockOpenOutlinedIcon className="nav-icons" />Logout</NavLink></li>
           </>
             : <li className="navbar-item"><NavLink to="/login"><LockOpenOutlinedIcon className="nav-icons" />Login</NavLink></li>

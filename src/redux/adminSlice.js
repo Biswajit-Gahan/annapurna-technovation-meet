@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const adminSlice = createSlice({
   name: "admin",
   initialState: {
-    isLoggedIn: true,
+    isLoggedIn: false,
   },
   reducers: {
     updateAdminLogin: (state, action) => {

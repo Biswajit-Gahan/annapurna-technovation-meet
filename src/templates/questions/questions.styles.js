@@ -31,6 +31,7 @@ export const QuestionsContainer = styled.div`
 
   .get-questions-container {
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 20px;
     overflow: auto;
   }

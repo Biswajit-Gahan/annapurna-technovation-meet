@@ -34,6 +34,7 @@ export const LocationContainer = styled.div`
   .leaflet-marker-icon {
     border-radius: 50%;
     border: 2px solid green;
+    object-fit: cover;
   }
 
   .user-container {

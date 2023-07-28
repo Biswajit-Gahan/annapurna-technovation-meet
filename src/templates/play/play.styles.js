@@ -9,6 +9,7 @@ export const PlayContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 
   .play-wrapper {
     min-height: 450px;
@@ -64,5 +65,22 @@ export const PlayContainer = styled.div`
     font-size: ${constants.fontSizes.defaultParagraph};
     font-weight: 600;
     cursor: pointer;
+  }
+
+  .quiz-play-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    ${constants.boxShadow};
+    background-color: ${constants.colors.annapurnaGreen};
+    color: ${constants.colors.white};
+    border: 7px solid ${constants.colors.white};
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .end-game {
+    color: ${constants.colors.annapurnaOrange}
   }
 `;

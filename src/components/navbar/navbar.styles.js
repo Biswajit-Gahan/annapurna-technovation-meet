@@ -10,6 +10,7 @@ export const NavbarContainer = styled.nav`
   align-items: center;
   justify-content: space-around;
   background-color: ${constants.colors.white};
+  ${constants.boxShadow};
 
   .brand-logo {
     width: auto;
