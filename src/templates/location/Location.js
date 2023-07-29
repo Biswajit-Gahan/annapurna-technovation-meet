@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { LocationContainer } from "./location.styles";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -8,7 +8,8 @@ import officeImage from "../../assets/images/office.jpeg";
 import userImage from "../../assets/images/user.png"
 
 import { database } from "../../utils/firebase";
-import { onValue, ref, set, update } from "firebase/database";
+import { onValue, ref } from "firebase/database";
+// import { onValue, ref, set, update } from "firebase/database";
 
 
 const Location = () => {
@@ -16,7 +17,7 @@ const Location = () => {
 
   console.log(!locations);
 
-  let intervalId;
+  let intervalId = useRef();
 
   // useEffect(() => {
   //   setLocations(() => ([...locationdb]));
@@ -46,7 +47,7 @@ const Location = () => {
   }, []);
 
   useEffect(() => {
-    intervalId = setInterval(() => {
+    intervalId.current = setInterval(() => {
       // let newLocations = locations.map((item) => {
 
       //   let loc = {
@@ -65,7 +66,7 @@ const Location = () => {
     }, 8000);
 
     return () => {
-      clearInterval(intervalId);
+      clearInterval(intervalId.current);
     };
   }, [locations]);
 
