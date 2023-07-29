@@ -77,11 +77,11 @@ const Results = () => {
             console.log(err)
           }
 
-          // setAllResults((prevData) => ([...prevData, { ...dataObj, users }]));
+          setAllResults((prevData) => ([...prevData, { ...dataObj, users }]));
 
         }
 
-        setAllResults((prevData) => ([...prevData, { ...dataObj, users }]));
+        // setAllResults((prevData) => ([...prevData, { ...dataObj, users }]));
 
         fetchData();
       });
@@ -94,7 +94,7 @@ const Results = () => {
     // return () => {
 
     // }
-  }, [allUsers, allQuestions])
+  }, [allUsers.length, allQuestions.length])
 
   return (
     <ResultContainer>
