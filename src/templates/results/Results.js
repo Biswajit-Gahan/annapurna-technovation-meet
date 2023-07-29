@@ -56,7 +56,7 @@ const Results = () => {
         // console.log(item)//
         const fetchData = async () => {
           try {
-            const { data } = await axios(`https://tih-dev.annapurnamsme.net/customer/question/getUserAnswered/time/${item.qid}`);
+            const { data } = await axios(`customer/question/getUserAnswered/time/${item.qid}`);
             // console.log(data.response); 
 
 
